@@ -46,5 +46,10 @@ class Calculadora {
         $this->validarEntradaCalculadora($valor2);
         return ($valor1 * $valor2);
     }
+    public function raizQuadrada($valor)
+    {
+        $this->validarEntradaCalculadora($valor);
+        return sqrt($valor);
+    }
 
 }

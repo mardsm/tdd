@@ -63,4 +63,15 @@ class CalculadoraTest extends AbstractFizzBuzzTestCase
     {
         $this->assertEquals($this->calculadora->multiplicar('d', 'f'), 'df');
     }
+    public function testRaizQuadrada()
+    {
+        $this->assertEquals($this->calculadora->raizQuadrada(81), 9);
+    }
+    /**
+     * @expectedException \InvalidArgumentException
+     */
+    public function testEntradaInvalidaRaiz()
+    {
+        $this->assertEquals($this->calculadora->raizQuadrada('adf'), 9);
+    }
 }
